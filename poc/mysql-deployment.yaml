@@ -15,7 +15,7 @@ spec:
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
-rm metadata:
+metadata:
   name: mysql-pv-claim
   labels:
     app: wordpress
