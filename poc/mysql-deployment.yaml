@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
-namespace: poc
 metadata:
   name: wordpress-mysql
   labels:
     app: wordpress
+  namespace: poc
 spec:
   ports:
     - port: 3306
@@ -19,6 +19,7 @@ metadata:
   name: mysql-pv-claim
   labels:
     app: wordpress
+  namespace: poc 
 spec:
   accessModes:
     - ReadWriteOnce
@@ -33,6 +34,7 @@ metadata:
   name: wordpress-mysql
   labels:
     app: wordpress
+  namespace: poc
 spec:
   selector:
     matchLabels:
