@@ -1,5 +1,6 @@
 apiVersion: v1
 kind: Service
+namespace: poc
 metadata:
   name: wordpress-mysql
   labels:
@@ -14,6 +15,7 @@ spec:
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
+namespace: poc
 metadata:
   name: mysql-pv-claim
   labels:
@@ -26,6 +28,7 @@ spec:
       storage: 20Gi
 ---
 apiVersion: apps/v1
+namespace: poc
 kind: Deployment
 metadata:
   name: wordpress-mysql
